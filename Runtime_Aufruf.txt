@@ -1,0 +1,18 @@
+$ErrorActionPreference = "Stop"
+
+# Runtime-Check
+$PowerShellRoot = "Z:\02 PowerShell"
+$RuntimeConfigDir = Join-Path $PowerShellRoot "01. Config"
+$RuntimeControlPath = Join-Path $RuntimeConfigDir "RuntimeControl.csv"
+$RuntimeLibPath = Join-Path $RuntimeConfigDir "Runtime.ps1"
+
+. $RuntimeLibPath
+
+Invoke-GlobalRuntimeCheck -RuntimeControlPath $RuntimeControlPath
+
+
+# =========================================================
+# AB HIER DEIN BESTEHENDES SCRIPT
+# =========================================================
+
+# ... bisheriger Code ...
